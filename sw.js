@@ -1,6 +1,5 @@
-// Service worker بسيط: بيكاش صفحة الغلاف بس (الداتا بتيجي من GAS دايماً أونلاين)
 const CACHE = 'roster-shell-v1';
-const SHELL = ['./', './index.html', './manifest.json', './icons/icon-192.png', './icons/icon-512.png'];
+const SHELL = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
